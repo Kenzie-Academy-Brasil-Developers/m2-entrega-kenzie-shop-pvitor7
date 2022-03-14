@@ -1,45 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@600&family=Rokkitt:wght@300&family=Supermercado+One&family=Varela&display=swap');
 
 html, body{
-    width: 100vw;
     height: 190vh;
+    width: 80vw;
     background: #FFFFFF;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    
+    align-items: center;
 }
 
 header{
-    width: 90vw;
+    width: 80vw;
     height: 63px;
-    left: 56px;
-    top: 67px;
+    margin-left: 15vw;
     font-family: 'Oswald', sans-serif;
     font-size: 65px;
-    /* or 102px */
-    display: flex;
+    
     align-items: center;
     color: #000000;
     text-shadow: 0px 6px 0px #FFFFFF;
 }
 
 h1{
-    width: 90vw;
-    height: 63px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 50px;
-    display: flex;
+    width: 80vw;
+    height: 50px;
+    margin-left: 17vw;
+    font-family: 'Arial';
+    font-style: unset;
+    font-size: 40px;
     align-items: center;
-    padding-left: 10vw;
     color: #000000;
 }
 
 main{
     display: flex;
-    width: 100vw;
+    width: 80vw;
     flex-direction: column;
     
 }
@@ -55,7 +51,7 @@ section{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    height: 1700px;
+    height: 1550px;
     width: 900px;
     background: #FFFFFF;
     border-radius: 8px;
@@ -65,7 +61,7 @@ section{
 #produto{
     display: flex;
     width: 200px;
-    height: 450px;
+    height: 470px;
     flex-direction: column;
 }
 
@@ -117,12 +113,10 @@ section{
     font-family: 'Oswald', sans-serif;
     color: gray;
     font-size: 10px;
-    text-decoration: line-through;
 }
 
 #preco{
     margin-top: auto;
-    margin-bottom: 0;
     height: 10px;
     font-family: 'Chivo', sans-serif;
     font-style: normal;
@@ -154,4 +148,15 @@ section{
     color: #2264D1;
     background: #FFFFFF;
     
+}
+
+#produto:hover {
+    border: solid #2264D1 1px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#botaoComprar:hover {
+    color: #FFFFFF;
+    background: #2264D1;
 }
