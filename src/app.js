@@ -1,4 +1,4 @@
-import { criarElementosHTML} from "./functions.js"
+import {Dom} from "./template.js"
 
 class app {
 
@@ -15,7 +15,7 @@ class app {
 
     static template(object) {
 
-        criarElementosHTML(object);
+        Dom.criarElementosHTML(object);
     }
 }
 

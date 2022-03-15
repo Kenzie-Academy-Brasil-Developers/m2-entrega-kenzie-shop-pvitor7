@@ -1,5 +1,10 @@
+import {estrelas} from "./estrelas.js"
+import { preco } from "./preco.js";
 
-export function criarElementosHTML(object) {
+
+export class Dom{
+    
+    static criarElementosHTML(object) {
 
     const areaProdutos = document.getElementById('produtos');
 
@@ -32,45 +37,13 @@ export function criarElementosHTML(object) {
     div.appendChild(buttonShop);
     areaProdutos.appendChild(div);
 
-    estrelaCheia(estrelasCheias, totalEstrelas)
-    estrelaVazia(estrelasVazias, totalEstrelas)
+    estrelas.estrelaCheia(estrelasCheias, totalEstrelas)
+    estrelas.estrelaVazia(estrelasVazias, totalEstrelas)
 
-    definirPreco(object, precoOriginal, price)
+    preco.definirPreco(object, precoOriginal, price)
 
     return areaProdutos;
-}
-
-
-
-function estrelaCheia(estrelasCheias, totalEstrelas) {
-
-    for (let i = 0; i < estrelasCheias; i++) {
-        const estrela = document.createElement('div')
-        estrela.id = 'estrela-cheia';
-        totalEstrelas.appendChild(estrela);
-    }
-    return totalEstrelas;
-}
-
-function estrelaVazia(estrelasVazias, totalEstrelas) {
-    for (let i = 0; i < estrelasVazias; i++) {
-        const estrela = document.createElement('div')
-        estrela.id = 'estrela-vazia';
-        totalEstrelas.appendChild(estrela);
-    }
-    return totalEstrelas;
-}
-
-
-function definirPreco(object, precoOriginal, price) {
-
-    if (object.promotionStatus === true) {
-        precoOriginal.innerHTML = `De: R$ ${object.price.productPrice},00`;
-        const preco = object.price.productPromotionPrice.toFixed(2).replace(/[.]/g, ',');
-        price.innerHTML = `Por: R$${preco}`
-
-    } else {
-        precoOriginal.innerHTML = ``;
-        price.innerHTML = `R$ ${object.price.productPrice},00`;
     }
 }
+
+
